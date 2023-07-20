@@ -3,6 +3,8 @@ import "./write.css"
 export default function Write() {
     return (
         <div className="write">
+            <img src="https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg" alt=""
+                className="writeImg" />
             <form className="writeForm">
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput">
