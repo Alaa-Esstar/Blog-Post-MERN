@@ -3,7 +3,7 @@ import "./write.css"
 export default function Write() {
     return (
         <div className="write">
-            <img src="https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg" alt=""
+            <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt=""
                 className="writeImg" />
             <form className="writeForm">
                 <div className="writeFormGroup">

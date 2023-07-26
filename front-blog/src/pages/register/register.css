@@ -51,3 +51,8 @@
     color: white;
     border-radius: 10px;
 }
+.errorMessage {
+    text-align: center;
+    color: lightcoral;
+    margin-top: 10px;
+}
