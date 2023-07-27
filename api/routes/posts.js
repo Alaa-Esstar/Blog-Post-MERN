@@ -54,7 +54,7 @@ router.delete("/:id", async (req, res) => {
     }
 })
 
-// Get pst
+// Get post
 router.get("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id);

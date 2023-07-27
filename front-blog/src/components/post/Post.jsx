@@ -2,14 +2,12 @@ import "./post.css"
 import { Link } from "react-router-dom"
 
 export default function Post({ post }) {
+    const PF = process.env.REACT_APP_IMG_URL;
     return (
         <div className='post'>
-            {post.photo && (
-                <img className="postImg"
-                    src={post.photo}
-                    alt="" />
-            )}
-            {/* <img className="postImg" src="https://thumbs.dreamstime.com/b/dirty-music-background-21777451.jpg" alt="" /> */}
+            <img className="postImg"
+                src={post.photo ? PF + post.photo : "./img/default.jpg"}
+                alt="" />
             <div className="postInfo">
                 <div className="postCats">{
                     post.categories.map(c => (

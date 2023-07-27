@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom"
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const apiBaseUrl = process.env.REACT_APP_API_URL; // Access the environment variable
-    const {search} = useLocation();
+    const { search } = useLocation();
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -21,12 +21,12 @@ export default function Home() {
             }
         };
         fetchPosts();
-    }, [search]);
+    }, [search, apiBaseUrl]);
     return (
         <>
             <Header />
             <div className="home">
-                <Posts posts={posts}/>
+                <Posts posts={posts} />
                 <SideBar />
             </div>
         </>

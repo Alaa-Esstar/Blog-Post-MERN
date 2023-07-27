@@ -1,0 +1,2 @@
+# copy this as .env
+MONGO_URL = 
