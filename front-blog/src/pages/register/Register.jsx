@@ -41,9 +41,9 @@ export default function Register() {
                 <input type="password" className="registerInput" placeholder="Enter your password"
                     onChange={e => setPassword(e.target.value)} />
                 <button className="registerButton" type="submit">Register</button>
-                <button className="registerLoginButton">
-                    <Link className="link" to={"/login"}>Login</Link>
-                </button>
+                <Link className="link" to={"/login"}>
+                    <button className="registerLoginButton" type="button">Login</button>
+                </Link>
                 {error &&
                     <span className="errorMessage">{error}</span>
                 }
