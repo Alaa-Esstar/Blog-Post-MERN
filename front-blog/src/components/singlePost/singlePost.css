@@ -71,6 +71,7 @@
     color: gray;
     border-bottom: 1px solid lightcoral;
 }
+
 .singlePostTitleInput:focus {
     outline: none;
 }
@@ -82,6 +83,7 @@
     color: gray;
     border-bottom: 1px solid lightcoral;
 }
+
 .singlePostDescInput:focus {
     outline: none;
 }
@@ -96,4 +98,45 @@
     cursor: pointer;
     align-self: flex-end;
     margin-top: 20px;
+}
+
+
+.inputFileGroup {
+    margin-top: 20px;
+}
+
+.singlePostFileInputLabel {
+    font-family: "Lora", serif;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+.singlePostFileInputLabel:hover {
+    text-shadow: 0 2px 4px rgba(73, 143, 67, 0.767);
+}
+
+.inputFileGroup>p {
+    margin-top: 10px;
+    color: lightcoral;
+    cursor: pointer;
+}
+
+.singlePostCategoryName {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.singlePostCategories {
+    margin-top: 20px;
+}
+
+.singlePostCategoryLabel {
+    margin-right: 10px;
+}
+
+.error {
+    color: lightcoral;
+    margin: 5px 0;
+    font-size: 19px;
+    text-align: center;
 }

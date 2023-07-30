@@ -17,9 +17,13 @@ export default function SideBar() {
     return (
         <div className="sidebar">
             <div className="sideBarItem">
-                <span className="sideBarTitle">About Me</span>
-                <img src="https://www.hardware.com.br/wp-content/uploads/static/wp/2021/04/11/Steve-Jobs.jpg" alt="" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, accusantium sed. Quod, quam nam non quasi dolores esse ad voluptatibus blanditiis sapiente, vero eligendi debitis ipsa! Impedit hic aliquid assumenda.</p>
+                <span className="sideBarTitle">About The Project</span>
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/243/6/desktop-wallpaper-mern-stack-bloggerboy-mern-stack.jpg" alt="" />
+                <p>
+                    A MERN blog app is a web application that lets users read, write, edit, and delete blog posts. It uses MongoDB for data storage, Express.js for handling server-side logic,
+                    React.js for building the user interface, and Node.js for server-side runtime. Users can create accounts, publish posts, and interact with others.
+                    The app offers an intuitive and responsive platform for sharing thoughts and ideas with a community of readers.
+                </p>
             </div>
             <div className="sideBarItem">
                 <span className="sideBarTitle">Categories</span>
@@ -34,9 +38,12 @@ export default function SideBar() {
             <div className="sideBarItem">
                 <span className="sideBarTitle">Follow Us</span>
                 <div className="sideBarSocial">
-                    <i className="sidebarIcon fa-brands fa-square-facebook"></i>
-                    <i className="sidebarIcon fa-brands fa-square-instagram"></i>
-                    <i className="sidebarIcon fa-brands fa-square-github"></i>
+                    <Link to={"https://www.facebook.com/Digostastar"} target="_blanck">
+                        <i className="sidebarIcon fa-brands fa-square-facebook"></i>
+                    </Link>
+                    <Link to={"https://github.com/Alaa-Esstar"} target="_blank">
+                        <i className="sidebarIcon fa-brands fa-square-github"></i>
+                    </Link>
                 </div>
             </div>
         </div>

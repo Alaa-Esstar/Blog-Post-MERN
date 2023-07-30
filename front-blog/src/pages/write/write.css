@@ -60,3 +60,30 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+.categoryList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categoryList li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.categoryList li.selected {
+    background-color: #c4b0b0;
+    color: #333;
+}
+
+.error {
+    color: lightcoral;
+    margin: 5px 0;
+    font-size: 19px;
+    text-align: center;
+}

@@ -80,3 +80,9 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+.settingsSuccess {
+    color: teal;
+    text-align: center;
+    margin-top: 20px;
+}

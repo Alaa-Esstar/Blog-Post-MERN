@@ -29,9 +29,14 @@
     text-align: center;
 }
 
-.sideBarItem > img {
+.sideBarItem>img {
     margin-top: 15px;
     width: 100%;
+    object-fit: cover;
+}
+.sideBarItem>p {
+    text-align: justify;
+    line-height: 25px;
 }
 
 .sideBarList {
@@ -44,6 +49,7 @@
     width: 50%;
     margin-top: 15px;
     cursor: pointer;
+    color: #b39656;
 }
 
 .sideBarSocial {
