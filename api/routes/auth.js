@@ -5,6 +5,14 @@ const bcrypt = require('bcrypt');
 // Register
 router.post("/register", async (req, res) => {
     try {
+        const existingUser = await User.findOne({
+            $or: [{ username: req.body.username }, { email: req.body.email }]
+        });
+        if (existingUser) {
+            // If the username or email is already in use, send a response with an error message
+            return res.status(409).json({ error: "Username or email is already in use." });
+        }
+
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(req.body.password, salt);
         const newUser = new User({
@@ -13,7 +21,7 @@ router.post("/register", async (req, res) => {
             password: hashedPass,
         });
         const user = await newUser.save();
-        const {password, ...others} = user._doc
+        const { password, ...others } = user._doc
         res.status(200).json(others);
     } catch (err) {
         res.status(500).json(err);
@@ -30,7 +38,7 @@ router.post("/login", async (req, res) => {
         if (!validated)
             return res.status(401).json("wrong credentials!")
 
-        const {password, ...others} = user._doc
+        const { password, ...others } = user._doc
         res.status(200).json(others);
     } catch (err) {
         res.status(500).json(err);

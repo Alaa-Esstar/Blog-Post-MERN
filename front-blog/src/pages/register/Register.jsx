@@ -7,23 +7,25 @@ export default function Register() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [error, setError] = useState(false)
+    const [error, setError] = useState("")
     const apiBaseUrl = process.env.REACT_APP_API_URL; // Access the environment variable
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError(false);
+        setError("");
         try {
             const res = await axios.post(`${apiBaseUrl}auth/register`, {
                 username,
                 email,
                 password
             })
-            console.log(res)
-            res.data && window.location.replace("/login")
+            res.data && window.location.replace("/login");
         } catch (err) {
-            setError(true)
+            if (err.response && err.response.status === 409) {
+                setError("Username or email is already in use");
+            } else {
+                setError("Something went wrong");
+            }
         }
-
     }
     return (
         <div className="register">
@@ -43,7 +45,7 @@ export default function Register() {
                     <Link className="link" to={"/login"}>Login</Link>
                 </button>
                 {error &&
-                    <span className="errorMessage">Something went wrong</span>
+                    <span className="errorMessage">{error}</span>
                 }
             </form>
         </div>
