@@ -9,17 +9,11 @@ const categoryRoute = require("./routes/categories");
 const multer = require('multer');
 const cors = require('cors');
 const path = require("path");
-const fs = require("fs");
 
 dotenv.config();
 app.use(express.json());
 app.use(cors());
-// Create the /images directory if it doesn't exist
-const imagesDirectory = path.join(__dirname, "/images");
-if (!fs.existsSync(imagesDirectory)) {
-    fs.mkdirSync(imagesDirectory);
-}
-app.use("/images", express.static(imagesDirectory));
+app.use("/images", express.static(path.join(__dirname, "/images")))
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
