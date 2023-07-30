@@ -56,3 +56,10 @@
     color: white;
     border-radius: 10px;
 }
+
+.errorMessage {
+    text-align: center;
+    margin-top: 10px;
+    color: azure !important;
+    text-shadow: 2px 3px lightcoral;
+}
